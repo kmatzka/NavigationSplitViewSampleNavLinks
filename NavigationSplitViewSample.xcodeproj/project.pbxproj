@@ -66,14 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				406E37172ADD1B2900C63A42 /* NavigationSplitViewSampleApp.swift */,
-				406E37252ADD1BA100C63A42 /* AppState.swift */,
+				406E372A2ADD1BA100C63A42 /* MainView.swift */,
+				406E372B2ADD1BA100C63A42 /* LibraryView.swift */,
+				406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */,
 				406E37282ADD1BA100C63A42 /* DetailView.swift */,
 				406E37262ADD1BA100C63A42 /* EditSelectDeleteButtons.swift */,
 				406E37292ADD1BA100C63A42 /* HousePart.swift */,
-				406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */,
-				406E372B2ADD1BA100C63A42 /* LibraryView.swift */,
-				406E372A2ADD1BA100C63A42 /* MainView.swift */,
 				406E37272ADD1BA100C63A42 /* Store.swift */,
+				406E37252ADD1BA100C63A42 /* AppState.swift */,
 				406E371B2ADD1B2A00C63A42 /* Assets.xcassets */,
 				406E371D2ADD1B2A00C63A42 /* Preview Content */,
 			);

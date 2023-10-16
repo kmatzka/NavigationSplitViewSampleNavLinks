@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomEditButton: View {
-    @Binding var editMode: CustomEditMode
+    @Binding var editMode: EditMode
     @Binding var selectMode: SelectMode
     
     var cleanUpAction: () -> Void = {}
@@ -16,7 +16,7 @@ struct CustomEditButton: View {
     
     var body: some View {
         Button {
-//            withAnimation {
+            withAnimation {
                 if editMode == .active {
                     editMode = .inactive
                     cleanUpAction()
@@ -25,7 +25,7 @@ struct CustomEditButton: View {
                     editMode = .active
                     prepareEditMode()
                 }
-//            }
+            }
         } label: {
             if editMode == .active {
                 Text("Done").bold()

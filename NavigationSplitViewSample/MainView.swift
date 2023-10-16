@@ -17,74 +17,51 @@ struct MainView: View {
     @State private var selection: Set<HousePart.ID> = []
     
     var body: some View {
-        Group {
-            if hSizeClass == .compact && state.editMode == .active {
-                NavigationStack {
-                    LibraryView(selection: $selection)
-                        .searchable(text: $store.housePartsFilter)
-                        .autocorrectionDisabled()
-                        .textInputAutocapitalization(.never)
-                        .onSubmit(of: .search) {
-                            /// To be able to trigger .dismissSearch() in .searchable child view
-                            state.onSubmitSearch = true
-                        }
-                        .navigationBarTitleDisplayMode(.large)
-                        .navigationTitle("Library")
+        NavigationSplitView(columnVisibility: $splitViewVisibility) {
+            LibraryView(selection: $selection)
+                .searchable(text: $store.housePartsFilter)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .onSubmit(of: .search) {
+                    /// To be able to trigger .dismissSearch() in .searchable child view
+                    state.onSubmitSearch = true
                 }
-                
-//                .transaction { $0.animation = nil }
-
-            } else {
-                NavigationSplitView(columnVisibility: $splitViewVisibility) {
-                    LibraryView(selection: $selection)
-                        .searchable(text: $store.housePartsFilter)
-                        .autocorrectionDisabled()
-                        .textInputAutocapitalization(.never)
-                        .onSubmit(of: .search) {
-                            /// To be able to trigger .dismissSearch() in .searchable child view
-                            state.onSubmitSearch = true
-                        }
-                        .onDisappear {
-                            if hSizeClass == .regular {
-                                /// In .compact size class we are using are removing NavSplitView for a NavStack
-                                /// In that case, we must not end editMode!
-                                state.editMode = .inactive
-                            }
-                        }
-                        .navigationBarTitleDisplayMode(.large)
-                        .navigationTitle("Library")
-                } detail: {
-                    if state.editMode == .inactive {
-                        if let housePartID = selection.first {
-                            DetailView(housePartID: housePartID)
-                                .navigationBarTitleDisplayMode(.large)
-                                .navigationTitle(store.housePart(id: housePartID)?.name ?? " ")
-                        } else {
-                            Text("Select a HousePart.")
-                                .navigationBarTitleDisplayMode(.large)
-                                .navigationTitle(" ")
-                        }
-                    } else {
-                        ZStack {
-                            Color.clear /// Grabs all space available.
-                            Text("Select a HousePart.")
-                                .foregroundStyle(.thinMaterial)
-                                .navigationBarTitleDisplayMode(.large)
-                                .navigationTitle(" ")
-                        }
-                        .contentShape(Rectangle())  /// Make sure all of Color.clear is tap-able.
-                        .onTapGesture {
-                            state.editMode = .inactive
-                            state.onSubmitSearch = true
-                        }
+                .onDisappear {
+                    if hSizeClass == .regular {
+                        /// In .compact size class we are removing NavSplitView for a NavStack
+                        /// In that case, we must not end editMode!
+                        state.editMode = .inactive
                     }
                 }
-                .navigationSplitViewStyle(.balanced)
-
-//                .transaction { $0.animation = nil }
-
+                .navigationBarTitleDisplayMode(.large)
+                .navigationTitle("Library")
+        } detail: {
+            if state.editMode == .inactive {
+                if let housePartID = selection.first {
+                    DetailView(housePartID: housePartID)
+                        .navigationBarTitleDisplayMode(.large)
+                        .navigationTitle(store.housePart(id: housePartID)?.name ?? " ")
+                } else {
+                    Text("Select a HousePart.")
+                        .navigationBarTitleDisplayMode(.large)
+                        .navigationTitle(" ")
+                }
+            } else {
+                ZStack {
+                    Color.clear /// Grabs all space available.
+                    Text("Select a HousePart.")
+                        .foregroundStyle(.thinMaterial)
+                        .navigationBarTitleDisplayMode(.large)
+                        .navigationTitle(" ")
+                }
+                .contentShape(Rectangle())  /// Make sure all of Color.clear is tap-able.
+                .onTapGesture {
+                    state.editMode = .inactive
+                    state.onSubmitSearch = true
+                }
             }
         }
+        .navigationSplitViewStyle(.balanced)
         .environmentObject(store)
     }
 }

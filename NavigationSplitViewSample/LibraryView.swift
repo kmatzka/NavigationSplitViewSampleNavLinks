@@ -31,23 +31,27 @@ struct LibraryView: View {
                         .italic()
                     Spacer()
                 }
-                .listRowBackground(Color(UIColor.secondarySystemBackground))
+                .listRowBackground(Color(.secondarySystemBackground))
                 .listRowSeparator(.hidden)
             } else {
-                ForEach(store.filteredHouseParts) { housePart in
-                    LibraryRowView(housePart: housePart, selection: $selection)
+                Section("Section 1") {
+                    LibraryRowView(housePart: HousePart(name: "Single Item 1", docText: ["Single Line 1"]), selection: $selection)
                         .listRowSeparator(.hidden)
-                        .transaction { transaction in
-                            transaction.animation = .default
-                        }
+                        .listRowBackground(Color(.secondarySystemBackground))
                 }
-                /// Remove leading red delete buttons in editMode.
-                .deleteDisabled(true)
+                Section("Section 2") {
+                    ForEach(store.filteredHouseParts) { housePart in
+                        LibraryRowView(housePart: housePart, selection: $selection)
+                             .listRowSeparator(.hidden)
+                             .listRowBackground(Color(.secondarySystemBackground))
+                    }
+                }
             }
         }
-        /// Do not show a selection frame. Side effect: the selection checkmark is not visible either --> need custom.
-        .tint(.clear)
-        
+        .listStyle(.grouped)
+//        .tint(.purple)
+        .environment(\.editMode, $state.editMode)
+
         .onChange(of: isSearching) { isSearching in
             if isSearching {
                 if state.editMode == .inactive {
