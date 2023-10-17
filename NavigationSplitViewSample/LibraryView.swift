@@ -68,6 +68,9 @@ struct LibraryView: View {
             }
         }
         .onChange(of: selection) { selection in
+            if state.editMode == .inactive {
+                editModeSavedSelection = selection
+            }
             if isSearching && !selection.isEmpty && state.editMode == .inactive {
                 dismissSearch()
             }
@@ -81,10 +84,7 @@ struct LibraryView: View {
             }
         }
         .onChange(of: state.editMode) { editMode in
-            if editMode == .active {
-                editModeSavedSelection = selection
-                selection = []
-            } else {
+            if editMode == .inactive {
                 /// Switch back to non-editMode, restore selection.
                 if editModeSavedSelection.isSubset(of: store.houseParts.map { $0.id }) {
                     /// Saved selected item has not been deleted during editMode.
@@ -107,7 +107,7 @@ struct LibraryView: View {
 //        .toolbar(removing: state.editMode == .active ? .sidebarToggle : nil)  // iOS 17 only
         .toolbar {
             if state.showToolbarItems {
-                /// To work around a bug that removes toolbar items when app moves to background.
+                /// To work around a bug that removes toolbar items when app moves to background in iOS 17.
                 
                 ToolbarItemGroup(placement: .primaryAction) {
                     HStack(spacing: 0) {
