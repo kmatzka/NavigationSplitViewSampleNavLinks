@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    @Environment(\.horizontalSizeClass) private var hSizeClass
     @StateObject var store = Store()
     @ObservedObject var state = AppState.shared
     
@@ -26,13 +25,9 @@ struct MainView: View {
                     /// To be able to trigger .dismissSearch() in .searchable child view
                     state.onSubmitSearch = true
                 }
-//                .onDisappear {
-//                    if hSizeClass == .regular {
-//                        /// In .compact size class we are removing NavSplitView for a NavStack
-//                        /// In that case, we must not end editMode!
-//                        state.editMode = .inactive
-//                    }
-//                }
+                .onDisappear {
+                    state.editMode = .inactive
+                }
                 .navigationBarTitleDisplayMode(.large)
                 .navigationTitle("Library")
         } detail: {
@@ -56,8 +51,10 @@ struct MainView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
-                    state.editMode = .inactive
-                    state.onSubmitSearch = true
+                    withAnimation {
+                        state.editMode = .inactive
+                        state.onSubmitSearch = true
+                    }
                 }
             }
         }
