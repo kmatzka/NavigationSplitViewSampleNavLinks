@@ -18,6 +18,7 @@ struct NavigationSplitViewSampleApp: App {
     var body: some Scene {
         WindowGroup {
             MainView(splitViewVisibility: $splitViewVisibility)
+                .tint(Color(.systemPurple))
                 .onChange(of: scenePhase) { scenePhase in
                         switch scenePhase {
                         case .background:

@@ -23,8 +23,8 @@ struct LibraryView: View {
     var body: some View {
         List(selection: $selection) {
             if store.filteredHouseParts.isEmpty {
+                /// Welcome side effect: removes sidebar layout glitch when moving from a populated to an empty library.
                 HStack {
-                    /// Welcome side effect: removes sidebar layout glitch when moving from a populated to an empty library.
                     Spacer()
                     Text(isSearching ? "Empty Search Results" : "Empty Library")
                         .foregroundStyle(Color(UIColor.lightGray))
@@ -35,21 +35,17 @@ struct LibraryView: View {
                 .listRowSeparator(.hidden)
             } else {
                 Section("Section 1") {
-                    LibraryRowView(housePart: HousePart(name: "Single Item 1", docText: ["Single Line 1"]), selection: $selection)
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color(.secondarySystemBackground))
-                }
-                Section("Section 2") {
                     ForEach(store.filteredHouseParts) { housePart in
                         LibraryRowView(housePart: housePart, selection: $selection)
                              .listRowSeparator(.hidden)
-                             .listRowBackground(Color(.secondarySystemBackground))
+                             .listRowBackground(Color(white: 1, opacity: 0))
+
                     }
                 }
             }
         }
-        .listStyle(.grouped)
-//        .tint(.purple)
+        .listStyle(.plain)
+        .tint(Color(.systemPurple))
         .environment(\.editMode, $state.editMode)
 
         .onChange(of: isSearching) { isSearching in

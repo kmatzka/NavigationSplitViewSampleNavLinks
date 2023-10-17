@@ -22,7 +22,10 @@ struct LibraryRowView: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 10)
             .contentShape(Rectangle())
-            .background(RoundedRectangle(cornerRadius: 10).fill(.purple))
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(selection.contains(housePart.id) ? Color(.systemPurple) : Color("ListRowBackgroundColor")).opacity(0.7)
+            )
             .onTapGesture {
                 if state.editMode == .active {
                     if selection.contains(housePart.id) {
@@ -80,7 +83,7 @@ struct LibraryRowView: View {
                 Text(housePart.name)
                     .font(.title3)
                     .bold()
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(selection.contains(housePart.id) ? .primary : Color(.systemPurple))
                 Text(housePart.docText.joined(separator: ", "))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
@@ -95,5 +98,4 @@ struct LibraryRowView: View {
         housePart: HousePart(name: "House", docText: ["Wall", "Roof"]),
         selection: .constant(Set(arrayLiteral: HousePart(name: "House", docText: ["Wall", "Roof"]).id))
     )
-    .background(Color.yellow)
 }

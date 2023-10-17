@@ -26,13 +26,13 @@ struct MainView: View {
                     /// To be able to trigger .dismissSearch() in .searchable child view
                     state.onSubmitSearch = true
                 }
-                .onDisappear {
-                    if hSizeClass == .regular {
-                        /// In .compact size class we are removing NavSplitView for a NavStack
-                        /// In that case, we must not end editMode!
-                        state.editMode = .inactive
-                    }
-                }
+//                .onDisappear {
+//                    if hSizeClass == .regular {
+//                        /// In .compact size class we are removing NavSplitView for a NavStack
+//                        /// In that case, we must not end editMode!
+//                        state.editMode = .inactive
+//                    }
+//                }
                 .navigationBarTitleDisplayMode(.large)
                 .navigationTitle("Library")
         } detail: {
@@ -48,13 +48,13 @@ struct MainView: View {
                 }
             } else {
                 ZStack {
-                    Color.clear /// Grabs all space available.
+                    Color.clear
                     Text("Select a HousePart.")
                         .foregroundStyle(.thinMaterial)
                         .navigationBarTitleDisplayMode(.large)
                         .navigationTitle(" ")
                 }
-                .contentShape(Rectangle())  /// Make sure all of Color.clear is tap-able.
+                .contentShape(Rectangle())
                 .onTapGesture {
                     state.editMode = .inactive
                     state.onSubmitSearch = true
