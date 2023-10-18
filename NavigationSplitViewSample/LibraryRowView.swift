@@ -59,7 +59,7 @@ struct LibraryRowView: View {
             }
     }
     
-    // MARK: - Private
+    // MARK: - Private Methods & Properties
     
     private func confirmDeleteItem(_ housePart: HousePart) {
         itemToDelete = housePart.id

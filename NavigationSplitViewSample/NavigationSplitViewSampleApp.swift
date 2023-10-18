@@ -28,7 +28,7 @@ struct NavigationSplitViewSampleApp: App {
                         /// Workaround for iOS17 bug that removes toolbar items when moving to background.
                         state.showToolbarItems = false
                         state.editMode = .inactive
-                        splitViewVisibility = .detailOnly
+//                        splitViewVisibility = .detailOnly
                     case .active:
                         print(".active")
                         state.showToolbarItems = true

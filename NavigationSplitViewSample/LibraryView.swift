@@ -124,7 +124,7 @@ struct LibraryView: View {
         }
     }
     
-    // MARK: - Private
+    // MARK: - Private Methods & Properties
     
     private func selectOrDeselectAll() {
         if selectMode == .allDeselected {
