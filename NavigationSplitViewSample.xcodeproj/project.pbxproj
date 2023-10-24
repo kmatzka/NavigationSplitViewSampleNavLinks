@@ -18,6 +18,7 @@
 		406E37322ADD1BA100C63A42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E372A2ADD1BA100C63A42 /* MainView.swift */; };
 		406E37332ADD1BA100C63A42 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E372B2ADD1BA100C63A42 /* LibraryView.swift */; };
 		406E37342ADD1BA100C63A42 /* LibraryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */; };
+		4087A5ED2AE7A3CD003BC890 /* BackwardCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087A5EC2AE7A3CD003BC890 /* BackwardCompatibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		406E372A2ADD1BA100C63A42 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		406E372B2ADD1BA100C63A42 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryRowView.swift; sourceTree = "<group>"; };
+		4087A5EC2AE7A3CD003BC890 /* BackwardCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCompatibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				406E37292ADD1BA100C63A42 /* HousePart.swift */,
 				406E37272ADD1BA100C63A42 /* Store.swift */,
 				406E37252ADD1BA100C63A42 /* AppState.swift */,
+				4087A5EC2AE7A3CD003BC890 /* BackwardCompatibility.swift */,
 				406E371B2ADD1B2A00C63A42 /* Assets.xcassets */,
 				406E371D2ADD1B2A00C63A42 /* Preview Content */,
 			);
@@ -163,6 +166,7 @@
 				406E372F2ADD1BA100C63A42 /* Store.swift in Sources */,
 				406E37302ADD1BA100C63A42 /* DetailView.swift in Sources */,
 				406E37332ADD1BA100C63A42 /* LibraryView.swift in Sources */,
+				4087A5ED2AE7A3CD003BC890 /* BackwardCompatibility.swift in Sources */,
 				406E372E2ADD1BA100C63A42 /* EditSelectDeleteButtons.swift in Sources */,
 				406E372D2ADD1BA100C63A42 /* AppState.swift in Sources */,
 				406E37182ADD1B2900C63A42 /* NavigationSplitViewSampleApp.swift in Sources */,
@@ -308,7 +312,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

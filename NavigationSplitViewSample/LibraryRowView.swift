@@ -26,6 +26,12 @@ struct LibraryRowView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(selection.contains(housePart.id) ? Color(.systemPurple) : Color("ListRowBackgroundColor")).opacity(0.7)
             )
+        
+            // Without this tapGesture
+            //  - on iPhone: SwiftUI would crash if a script that had been selected once before in a section
+            //    gets deleted together with ALL scripts in that section in editMode, as soon as editMode is
+            //    deactivated, leaving the list with an empty list selection (SectionedFetchRequest).
+            //  - on iPad: crash when selecting a different script in search results list.
             .onTapGesture {
                 if state.editMode == .active {
                     if selection.contains(housePart.id) {

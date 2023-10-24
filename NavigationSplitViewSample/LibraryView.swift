@@ -104,7 +104,7 @@ struct LibraryView: View {
                 state.onSubmitSearch = false
             }
         }
-//        .toolbar(removing: state.editMode == .active ? .sidebarToggle : nil)  // iOS 17 only
+        .toolbar(removing: state.editMode == .active ? .sidebarToggle : .none)
         .toolbar {
             if state.showToolbarItems {
                 /// To work around a bug that removes toolbar items when app moves to background in iOS 17.
