@@ -23,13 +23,6 @@ public enum ToolbarDefaultItemKind {
     }
 }
 
-@available(iOS, deprecated: 17, message: "Use SwiftUI native version in iOS 17+")
-struct ToolbarDefaultItemRemoverModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-    }
-}
-
 extension View {
     @available(iOS, deprecated: 17, message: "Use SwiftUI native version in iOS 17+")
     @ViewBuilder
@@ -42,7 +35,7 @@ extension View {
                 toolbar(removing: nil)
             }
         } else {
-            modifier(ToolbarDefaultItemRemoverModifier())
+            modifier(EmptyModifier())
         }
     }
 }
