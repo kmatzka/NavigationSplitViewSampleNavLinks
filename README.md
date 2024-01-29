@@ -1,4 +1,4 @@
-## NavigationSplitView
+## NavigationSplitView for iOS / iPad 16.4+
 
 A example implementation of Apple's NavigationSplitView for iPhone / iPad.
 
