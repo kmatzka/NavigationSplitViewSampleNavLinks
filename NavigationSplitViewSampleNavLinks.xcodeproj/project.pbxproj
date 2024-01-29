@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		406E37142ADD1B2900C63A42 /* NavigationSplitViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationSplitViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		406E37142ADD1B2900C63A42 /* NavigationSplitViewSampleNavLinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationSplitViewSampleNavLinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406E37172ADD1B2900C63A42 /* NavigationSplitViewSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewSampleApp.swift; sourceTree = "<group>"; };
 		406E371B2ADD1B2A00C63A42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		406E371E2ADD1B2A00C63A42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		406E37152ADD1B2900C63A42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				406E37142ADD1B2900C63A42 /* NavigationSplitViewSample.app */,
+				406E37142ADD1B2900C63A42 /* NavigationSplitViewSampleNavLinks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		406E37132ADD1B2900C63A42 /* NavigationSplitViewSample */ = {
+		406E37132ADD1B2900C63A42 /* NavigationSplitViewSampleNavLinks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 406E37222ADD1B2A00C63A42 /* Build configuration list for PBXNativeTarget "NavigationSplitViewSample" */;
+			buildConfigurationList = 406E37222ADD1B2A00C63A42 /* Build configuration list for PBXNativeTarget "NavigationSplitViewSampleNavLinks" */;
 			buildPhases = (
 				406E37102ADD1B2900C63A42 /* Sources */,
 				406E37112ADD1B2900C63A42 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = NavigationSplitViewSample;
+			name = NavigationSplitViewSampleNavLinks;
 			productName = NavigationSplitViewSample;
-			productReference = 406E37142ADD1B2900C63A42 /* NavigationSplitViewSample.app */;
+			productReference = 406E37142ADD1B2900C63A42 /* NavigationSplitViewSampleNavLinks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 406E370F2ADD1B2900C63A42 /* Build configuration list for PBXProject "NavigationSplitViewSample" */;
+			buildConfigurationList = 406E370F2ADD1B2900C63A42 /* Build configuration list for PBXProject "NavigationSplitViewSampleNavLinks" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				406E37132ADD1B2900C63A42 /* NavigationSplitViewSample */,
+				406E37132ADD1B2900C63A42 /* NavigationSplitViewSampleNavLinks */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +363,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		406E370F2ADD1B2900C63A42 /* Build configuration list for PBXProject "NavigationSplitViewSample" */ = {
+		406E370F2ADD1B2900C63A42 /* Build configuration list for PBXProject "NavigationSplitViewSampleNavLinks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				406E37202ADD1B2A00C63A42 /* Debug */,
@@ -372,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		406E37222ADD1B2A00C63A42 /* Build configuration list for PBXNativeTarget "NavigationSplitViewSample" */ = {
+		406E37222ADD1B2A00C63A42 /* Build configuration list for PBXNativeTarget "NavigationSplitViewSampleNavLinks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				406E37232ADD1B2A00C63A42 /* Debug */,
