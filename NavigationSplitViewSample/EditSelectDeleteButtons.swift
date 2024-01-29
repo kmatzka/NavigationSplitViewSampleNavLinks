@@ -1,6 +1,6 @@
 //
 //  EditSelectDeleteButtons.swift
-//  NavigationSplitView3
+//  NavigationSplitView4
 //
 //  Created by Klaus Matzka on 08.10.23.
 //

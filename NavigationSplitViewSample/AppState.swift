@@ -1,6 +1,6 @@
 //
 //  AppState.swift
-//  NavigationSplitView3
+//  NavigationSplitView4
 //
 //  Created by Klaus Matzka on 09.10.23.
 //
