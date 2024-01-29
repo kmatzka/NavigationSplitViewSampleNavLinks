@@ -19,6 +19,7 @@
 		406E37332ADD1BA100C63A42 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E372B2ADD1BA100C63A42 /* LibraryView.swift */; };
 		406E37342ADD1BA100C63A42 /* LibraryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */; };
 		4087A5ED2AE7A3CD003BC890 /* BackwardCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087A5EC2AE7A3CD003BC890 /* BackwardCompatibility.swift */; };
+		409310D92B67A27600A5CC4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 409310D82B67A27600A5CC4B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		406E372B2ADD1BA100C63A42 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		406E372C2ADD1BA100C63A42 /* LibraryRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryRowView.swift; sourceTree = "<group>"; };
 		4087A5EC2AE7A3CD003BC890 /* BackwardCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardCompatibility.swift; sourceTree = "<group>"; };
+		409310D82B67A27600A5CC4B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		406E370B2ADD1B2900C63A42 = {
 			isa = PBXGroup;
 			children = (
+				409310D82B67A27600A5CC4B /* README.md */,
 				406E37162ADD1B2900C63A42 /* NavigationSplitViewSample */,
 				406E37152ADD1B2900C63A42 /* Products */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409310D92B67A27600A5CC4B /* README.md in Resources */,
 				406E371F2ADD1B2A00C63A42 /* Preview Assets.xcassets in Resources */,
 				406E371C2ADD1B2A00C63A42 /* Assets.xcassets in Resources */,
 			);
