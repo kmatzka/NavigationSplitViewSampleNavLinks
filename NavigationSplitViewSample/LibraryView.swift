@@ -21,7 +21,9 @@ struct LibraryView: View {
     @State private var editModeSavedSelection: Set<HousePart.ID> = []
 
     var body: some View {
+        
         List(selection: $selection) {
+            
             if store.filteredHouseParts.isEmpty {
                 /// Welcome side effect: removes sidebar layout glitch when moving from a populated to an empty library.
                 HStack {
@@ -43,6 +45,7 @@ struct LibraryView: View {
                     }
                 }
             }
+            
         }
         .listStyle(.plain)
         .tint(Color(.systemPurple))
@@ -104,7 +107,9 @@ struct LibraryView: View {
                 state.onSubmitSearch = false
             }
         }
+        
         .toolbar(removing: state.editMode == .active ? .sidebarToggle : .none)
+        
         .toolbar {
             if state.showToolbarItems {
                 /// To work around a bug that removes toolbar items when app moves to background in iOS 17.

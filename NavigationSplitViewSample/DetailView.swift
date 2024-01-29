@@ -27,6 +27,13 @@ struct DetailView: View {
         }
         .navigationBarTitleDisplayMode(.large)
         .navigationTitle(housePartName)
+        
+        .onAppear {
+            print("*** onAppear")
+        }
+        .onDisappear {
+            print("*** onDisappear")
+        }
     }
 }
 
